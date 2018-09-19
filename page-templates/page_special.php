@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Special PAg
+ * Template Name: Special Page
  *
  * @package Sela
  */

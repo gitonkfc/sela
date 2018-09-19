@@ -14,7 +14,11 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+<<<<<<< HEAD
 				<?php get_template_part( 'content', get_post_format() ); ?>
+=======
+				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+>>>>>>> f792b1db3e81be981060d86ce16a792bba17284b
 
 			<?php endwhile; ?>
 
@@ -22,7 +26,11 @@ get_header(); ?>
 
 		<?php else : ?>
 
+<<<<<<< HEAD
 			<?php get_template_part( 'content', 'none' ); ?>
+=======
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+>>>>>>> f792b1db3e81be981060d86ce16a792bba17284b
 
 		<?php endif; ?>
 

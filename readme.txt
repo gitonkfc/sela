@@ -6,6 +6,7 @@ Tested up to: 4.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+<<<<<<< HEAD
 == Description ==
 
 Sela is not your typical business theme. Vibrant, bold, and clean, with lots of space for large images, it's a great canvas to tell your comapny's story.
@@ -374,3 +375,8 @@ Linking to any of the following sites will automatically display its icon in you
 
 = 18 August 2014 =
 * Move from /dev to /pub
+=======
+=== Changelog ===
+* Folder re-structure
+* Adding some tag on style.css
+>>>>>>> f792b1db3e81be981060d86ce16a792bba17284b
