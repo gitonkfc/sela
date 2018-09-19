@@ -21,12 +21,12 @@ get_header(); ?>
 
     			<div class="row content justify-content-md-center">
         			<div class="col-md-8 justify-content-md-center">
-            							<?php $content = apply_filters( 'the_content', $post->post_content );
-					$embeds = get_media_embedded_in_content( $content );
-					echo $embeds[0];
+        				<?php $content = apply_filters( 'the_content', $post->post_content );
+							$embeds = get_media_embedded_in_content( $content );
+							echo $embeds[0];
 
-				?>
-				  	       				<h4 class="title font-weight-bold"><?php echo esc_attr($post->post_title)?></h4>
+						?>
+				  	   	<h4 class="title font-weight-bold"><?php echo esc_attr($post->post_title)?></h4>
   	       				<?php  echo '<p class="text-justify category-group">' . $post->post_excerpt . '</p>' ?>
         			</div>
     			</div>

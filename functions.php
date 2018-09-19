@@ -309,7 +309,8 @@ function sc_homerecentpost ($atts)
 	  // get the posts
     $posts = get_posts(
         array(
-            'numberposts'   => 1
+            'numberposts'   => 1,
+            'cat' => '-10'
         )
     );
 
@@ -346,34 +347,37 @@ add_shortcode('homerecentpost', 'sc_homerecentpost');
 
 function sc_3_video($atts)
 {
-	extract(shortcode_atts(array(
-		'video1' => '',
-		'video2' => '',
-		'video3' => '',
-		'title1' => '',
-		'title2' => '',
-		'title3' => ''
-	),$atts));
-	$result .= '<div class="row content justify-content-md-center">';
-	$result .= '<div class="col">';
-	$result .= '<div class="embed-responsive embed-responsive-21by9">';
-	$result .= '<video class="wp-video-shortcode" id="video-127-1" width="400" height="180" preload="metadata" controls="controls"><source type="video/mp4" src="'.$video1.'?_=1" /><a href="'.$video1.'">'.$video1.'</a></video>';
-    $result .= '</div>';
-	$result .= '<p class="font-weight-bold recentvideo">'.$title1.'</p>';
-	$result .= '</div>';
-	$result .= '<div class="col">';
-	$result .= '<div class="embed-responsive embed-responsive-21by9">';
-	$result .= '<video class="wp-video-shortcode" id="video-127-1" width="400" height="180" preload="metadata" controls="controls"><source type="video/mp4" src="'.$video2.'?_=1" /><a href="'.$video2.'">'.$video2.'</a></video>';
-    $result .= '</div>';
-	$result .= '<p class="font-weight-bold recentvideo">'.$title2.'</p>';
-	$result .= '</div>';
-	$result .= '<div class="col">';
-	$result .= '<div class="embed-responsive embed-responsive-21by9">';
-	$result .= '<video class="wp-video-shortcode" id="video-127-1" width="400" height="180" preload="metadata" controls="controls"><source type="video/mp4" src="'.$video2.'?_=1" /><a href="'.$video3.'">'.$video3.'</a></video>';
-    $result .= '</div>';
-	$result .= '<p class="font-weight-bold recentvideo">'.$title3.'</p>';
-	$result .= '</div>';
-	return $result;
+	  // get the posts
+    $posts = get_posts(
+        array(
+            'numberposts'   => 3,
+            'category_name' => 'gallery'
+        )
+    );
+
+    // No posts? run away!
+    if( empty( $posts ) ) return '';
+
+    /**
+     * Loop through each post, getting what we need and appending it to 
+     * the variable we'll send out
+     */ 
+    $out ='<div class="row content justify-content-md-center">';
+    foreach( $posts as $post )
+    {
+    	$content = apply_filters( 'the_content', $post->post_content );
+    	$embeds = get_media_embedded_in_content( $content );
+   	$out .= '<div class="col-sm-3">';
+   	$out .= '<div class="embed-responsive embed-responsive-16by9">';
+    $out .= $embeds[0];
+    $out .= '</div>';
+    $out .= '<div class="w-100">';
+    $out .= '<h4 class="text-center font-weight-bold">'. esc_attr( $post->post_title ).'</h4>';
+    $out .= '</div>';
+    $out .= '</div>';
+    }
+    $out .= '</div>';
+    return $out;
 }
 
 add_shortcode('3_video', 'sc_3_video');
