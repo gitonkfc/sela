@@ -1,10 +1,10 @@
 /*
 Theme Name: Polycrol
-Theme URI: https://wordpress.com/themes/sela/
-Description: Sela is not your typical business theme. Vibrant, bold, and clean, with lots of space for large images, this theme will look great on all devices, from desktop to mobile.
-Version: 1.0.17
-Author: Automattic
-Author URI: https://wordpress.com/themes/
+Theme URI: https://polycrol.getalla.co/
+Description: Polycrol micro site theme
+Version : 1.0.0
+Author: Getalla
+Author URI: https://getalla.co/
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sela
@@ -466,7 +466,7 @@ textarea {
 	line-height: 1.7143;
 	padding: 1em;
 	text-decoration: none;
-	text-transform: uppercase;
+/*	text-transform: uppercase;*/
 	-webkit-transition: color 0.2s ease;
 			transition: color 0.2s ease;
 }
@@ -546,16 +546,7 @@ textarea {
 }
 .menu-toggle,
 .main-navigation.toggled .nav-menu {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-	font-family: Lato;
  	font-weight: normal;
->>>>>>> f792b1db3e81be981060d86ce16a792bba17284b
-=======
-	font-family: Lato;
- 	font-weight: normal;
->>>>>>> rev
 	display: block;
 }
 
@@ -1839,7 +1830,6 @@ video {
 @media screen and (min-width: 768px) {
 		/* Navigation */
 	.main-navigation {
-		font-family: Lato;
  		font-weight: normal;
 		width: 100%;
 	}

@@ -33,23 +33,17 @@ add_action( 'template_redirect', 'sela_content_width' );
 if(!function_exists('sela_setup')) : function sela_setup() {
 
 	load_theme_textdomain( 'sela', get_template_directory() . '/languages' );
-
 	add_editor_style( array( 'assets/css/editor-style.css', sela_fonts_url() ) );
-
 	add_theme_support( 'automatic-feed-links' );
-
 	add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form', ) );
-
 	add_theme_support( 'title-tag' );
-
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'link', 'quote','video' ) );
+	add_theme_support( 'post-thumbnails' );
 
 	register_nav_menus( array(
 		'primary'	=> __( 'Primary Menu', 'sela' ),
 		'social'	=> __( 'Social Menu', 'sela' ),
 	) );
-
-	add_theme_support( 'post-thumbnails' );
 
 	// Post thumbnails
 	set_post_thumbnail_size( 820, 312, true );
@@ -181,18 +175,19 @@ add_action( 'widgets_init', 'sela_widgets_init' );
  * Enqueue scripts and styles.
  */
 function sela_scripts_styles() {
-	// Add Oswald, Source Sans Pro and Droid Serif fonts.
+	// Bootstrap base init
 	wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+
+	// Add Oswald, Source Sans Pro, Droid Serif, Lato & Genericons font
 	wp_enqueue_style( 'sela-fonts', sela_fonts_url(), array(), null );
-
-	// Add Lato Fonts
-	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700', false );
-
-	// Add Genericons font.
+	wp_enqueue_style( 'polycrol-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700', false );
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/assets/fonts/genericons.css', array(), '3.4.1' );
 
 	// Load the main stylesheet.
 	wp_enqueue_style( 'sela-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'master-style', get_template_directory_uri().'/assets/css/primary.css' );
+
+	// Load the main javascript.
 	wp_enqueue_script( 'sela-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20140813', true );
 	wp_enqueue_script( 'sela-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20140813', true );
 	wp_enqueue_script( 'sela-script', get_template_directory_uri() . '/assets/js/sela.js', array( 'jquery' ), '20140813', true );
@@ -201,7 +196,7 @@ function sela_scripts_styles() {
 	}
 	if ( is_singular() ) {
 
-		wp_enqueue_script( 'social','//assets.pinterest.com/js/pinit.js', array(), false, true );
+		wp_enqueue_script( 'social','https://assets.pinterest.com/js/pinit.js', array(), false, true );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
