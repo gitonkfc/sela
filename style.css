@@ -2234,6 +2234,16 @@ video {
 
 }
 
+.div3-center-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5VW;
+    font-weight: bold;
+    color: #fff;
+}
+
 img.overlay { 
     width: 100%;
     height: auto;
@@ -2255,6 +2265,12 @@ img.header-overlay {
 	text-align: center !important;
 	font-style: italic;
 	font-size: 2.5vw;
+	color: #20a6a1;
+}
+.col-sm.title p.h4{
+	text-align: center !important;
+	font-style: italic;
+	font-size: 1.5vw;
 	color: #20a6a1;
 }
 .col-sm.align-self-center p.h2{
@@ -2314,4 +2330,19 @@ header.site-main{
     padding-left: 1%;
     margin-right: 7%;
     margin-left: 7%;
+}
+.col-4.related-post{
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 40%;
+    max-width: 18%;
+}
+p.related-title{
+	font-size: 1.5vw;
+	color: #20a6a1;
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+}
+p.related.text-center{
+	font-size: 1.5vw;
 }

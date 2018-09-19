@@ -30,7 +30,7 @@ add_action( 'template_redirect', 'sela_content_width' );
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
-function sela_setup() {
+if(!function_exists('sela_setup')) : function sela_setup() {
 
 	load_theme_textdomain( 'sela', get_template_directory() . '/languages' );
 
@@ -69,6 +69,7 @@ function sela_setup() {
 	) ) );
 }
 add_action( 'after_setup_theme', 'sela_setup' );
+endif;
 
 /**
  * Returns the Google font stylesheet URL, if available.
@@ -196,8 +197,13 @@ function sela_scripts_styles() {
 
 	wp_enqueue_script( 'sela-script', get_template_directory_uri() . '/js/sela.js', array( 'jquery' ), '20140813', true );
 
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+	if ( is_singular() ) {
+		wp_enqueue_script( 'social', get_template_directory_uri() . '/js/social.js', array(), false, true );
+		wp_enqueue_script( 'social','//assets.pinterest.com/js/pinit.js', array(), false, true );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
@@ -278,19 +284,19 @@ function sc_div_3_overlay($atts)
 	$result .= '<div class="col">';
 	$result .= '<div class="container-overlay">';
 	$result .= '<a href="'. $link1 . '"><img class="overlay" src="'.$img1.'">';
-	$result .= ' <div class="center-overlay">'.$title1.'</div></a>';
+	$result .= ' <div class="div3-center-overlay">'.$title1.'</div></a>';
 	$result .= '</div>';
 	$result .= '</div>';
 	$result .= '<div class="col">';
 	$result .= '<div class="container-overlay">';
 	$result .= '<a href="'. $link2 . '"><img class="overlay" src="'.$img2.'">';
-	$result .= ' <div class="center-overlay">'.$title2.'</div></a>';
+	$result .= ' <div class="div3-center-overlay">'.$title2.'</div></a>';
 	$result .= '</div>';
 	$result .= '</div>';
 	$result .= '<div class="col">';
 	$result .= '<div class="container-overlay">';
 	$result .= '<a href="'. $link3 . '"><img class="overlay" src="'.$img3.'">';
-	$result .= ' <div class="center-overlay">'.$title3.'</div></a>';
+	$result .= ' <div class="div3-center-overlay">'.$title3.'</div></a>';
 	$result .= '</div>';
 	$result .= '</div>';
 	$result .= '</div>';
