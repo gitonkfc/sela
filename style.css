@@ -547,10 +547,15 @@ textarea {
 .menu-toggle,
 .main-navigation.toggled .nav-menu {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	font-family: Lato;
  	font-weight: normal;
 >>>>>>> f792b1db3e81be981060d86ce16a792bba17284b
+=======
+	font-family: Lato;
+ 	font-weight: normal;
+>>>>>>> rev
 	display: block;
 }
 
@@ -1834,11 +1839,8 @@ video {
 @media screen and (min-width: 768px) {
 		/* Navigation */
 	.main-navigation {
-<<<<<<< HEAD
-=======
 		font-family: Lato;
  		font-weight: normal;
->>>>>>> f792b1db3e81be981060d86ce16a792bba17284b
 		width: 100%;
 	}
 	.main-navigation ul {
