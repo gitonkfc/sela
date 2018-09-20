@@ -17,6 +17,7 @@ add_filter( 'wp_page_menu_args', 'poly_page_menu_args' );
 /**
  * Adds custom classes to the array of body classes.
  */
+
 function poly_body_classes( $classes ) {
 	if ( is_page_template( 'full-width-page.php' ) || is_page_template( 'grid-page.php' ) )
 		$classes[] = 'full-width-page';
@@ -54,6 +55,7 @@ function poly_post_classes( $classes ) {
 
     return $classes;
 }
+
 add_filter( 'post_class', 'poly_post_classes' );
 
 /**

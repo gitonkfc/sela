@@ -8,8 +8,8 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
 
+	<footer id="colophon" class="site-footer">
 		<div class="site-info"  role="contentinfo">
 			Polycrol 2018 All Right Reserved
 		</div><!-- .site-info -->

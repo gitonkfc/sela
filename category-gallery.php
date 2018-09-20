@@ -2,6 +2,7 @@
 /**
  * The template for displaying Archive pages.
  *
+<<<<<<< HEAD
  * @package poly
  */
 

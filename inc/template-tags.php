@@ -81,17 +81,20 @@ function poly_comment( $comment, $args, $depth ) {
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 
 			<header class="comment-meta">
+<<<<<<< HEAD
 				<?php printf( __( '%s <span class="says">says:</span>', 'poly' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 
 				<div class="comment-metadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
+<<<<<<< HEAD
 							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'poly' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
 					</a>
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
+<<<<<<< HEAD
 				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'poly' ); ?></p>
 				<?php endif; ?>
 

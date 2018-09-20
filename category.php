@@ -27,7 +27,7 @@ get_header(); ?>
         			<div class="col-sm align-self-center">
   	       				<h4 class="title font-weight-bold"><?php echo esc_attr($post->post_title)?></h4>
   	       				<?php  echo '<p class="text-justify category-group">' . $post->post_excerpt . '</p>' ?>
-            			<p class="text-justify category-group font-weight-bold"> <a href="<?php the_permalink()?>">(Baca Selengkapnya) </a></p>
+            			<p class="text-justify category-group font-weight-bold"> <a href="<?php the_permalink()?>">(Baca Selengkapnya) </a></p>c
         			</div>
     			</div>
     			<div class="space">

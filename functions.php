@@ -81,12 +81,10 @@ function poly_fonts_url() {
 	 * by Source Sans Pro, translate this to 'off'. Do not translate into your own language.
 	 */
 	$source_sans_pro  = _x( 'on', 'Source Sans Pro font: on or off',  'poly' );
-
 	/* translators: If there are characters in your language that are not supported
 	 * by Droid Serif, translate this to 'off'. Do not translate into your own language.
 	 */
 	$droid_serif = _x( 'on', 'Droid Serif font: on or off', 'poly' );
-
 	/* translators: If there are characters in your language that are not supported
 	 * by Oswald, translate this to 'off'. Do not translate into your own language.
 	 */
@@ -181,34 +179,27 @@ add_action( 'widgets_init', 'poly_widgets_init' );
  * Enqueue scripts and styles.
  */
 function poly_scripts_styles() {
-	// Add Oswald, Source Sans Pro and Droid Serif fonts.
+	// Bootstrap base init
 	wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
-	wp_enqueue_style( 'poly-fonts', poly_fonts_url(), array(), null );
 
-	// Add Lato Fonts
-	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700', false );
+	// Add Oswald, Source Sans Pro and Droid Serif fonts.
+	wp_enqueue_style( 'poly-fonts', poly_fonts_url(), array(), null );
+	wp_enqueue_style( 'polycrol-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700', false );
 
 	// Add Genericons font.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/fonts/genericons.css', array(), '3.4.1' );
 
 	// Load the main stylesheet.
 	wp_enqueue_style( 'poly-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'master-style', get_template_directory_uri().'/assets/css/primary.css' );
+
+	// Load the main javascript.
 	wp_enqueue_script( 'poly-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20140813', true );
 	wp_enqueue_script( 'poly-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20140813', true );
 	wp_enqueue_script( 'poly-script', get_template_directory_uri() . '/js/poly.js', array( 'jquery' ), '20140813', true );
 	wp_enqueue_script( 'social-script', get_template_directory_uri() . '/js/social.js', array(), false, true );
-	wp_enqueue_script( 'map-script', get_template_directory_uri() . '/js/imageMapResizer.js', array(), false, true );
-	wp_enqueue_script( 'map-script2', get_template_directory_uri() . '/js/imageMapResizer.map', array(), false, true );
-	wp_enqueue_script( 'map-script3', get_template_directory_uri() . '/js/imageMapResizer.min.js', array(), false, true );
-	wp_enqueue_script( 'buffer-script', 'https://d389zggrogs7qo.cloudfront.net/js/button.js', array(), false, true );
-	wp_enqueue_script( 'pinterest-script', 'https://assets.pinterest.com/js/pinit.js', array(), false, true );
-	wp_enqueue_script( 'pinterest-script', 'https://platform.linkedin.com/in.js', array(), false, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
-	if ( is_singular() ) {
-
-		wp_enqueue_script( 'social','//assets.pinterest.com/js/pinit.js', array(), false, true );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
