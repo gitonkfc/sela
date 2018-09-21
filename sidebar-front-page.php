@@ -4,7 +4,7 @@
  *
  * If no active widgets in either sidebar, they will be hidden completely.
  *
- * @package poly
+ * @package Sela
  */
 
 if ( ! is_active_sidebar( 'sidebar-5' ) && ! is_active_sidebar( 'sidebar-6' ) && ! is_active_sidebar( 'sidebar-7' ) ) {

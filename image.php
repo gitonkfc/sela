@@ -2,7 +2,7 @@
 /**
  * The template for displaying image attachments.
  *
- * @package poly
+ * @package Sela
  */
 
 get_header(); ?>
@@ -18,8 +18,8 @@ get_header(); ?>
 
 				<?php if ( get_post()->post_parent ) { ?>
 						<nav role="navigation" id="image-navigation" class="image-navigation">
-							<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav"></span> Previous', 'poly' ) ); ?></div>
-							<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav"></span>', 'poly' ) ); ?></div>
+							<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav"></span> Previous', 'sela' ) ); ?></div>
+							<div class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav"></span>', 'sela' ) ); ?></div>
 						</nav><!-- #image-navigation -->
 				<?php } ?>
 				</header><!-- .entry-header -->
@@ -30,7 +30,7 @@ get_header(); ?>
 						<?php
 							$metadata = wp_get_attachment_metadata();
 							if ( $post->post_parent ) {
-								printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'poly' ),
+								printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%8$s</a>', 'sela' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
 									esc_url( wp_get_attachment_url() ),
@@ -41,7 +41,7 @@ get_header(); ?>
 									get_the_title( $post->post_parent )
 								);
 							} else {
-								printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a>', 'poly' ),
+								printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s">%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a>', 'sela' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
 									esc_url( wp_get_attachment_url() ),
@@ -50,14 +50,14 @@ get_header(); ?>
 								);
 							}
 
-							edit_post_link( __( 'Edit', 'poly' ), '<span class="edit-link">', '</span>' );
+							edit_post_link( __( 'Edit', 'sela' ), '<span class="edit-link">', '</span>' );
 						?>
 					</div><!-- .entry-meta -->
 
 					<div class="entry-content">
 						<div class="entry-attachment">
 							<div class="attachment">
-								<?php poly_the_attached_image(); ?>
+								<?php sela_the_attached_image(); ?>
 							</div><!-- .attachment -->
 
 							<?php if ( has_excerpt() ) : ?>
@@ -70,7 +70,7 @@ get_header(); ?>
 						<?php
 							the_content();
 							wp_link_pages( array(
-								'before' => '<div class="page-links">' . __( 'Pages:', 'poly' ),
+								'before' => '<div class="page-links">' . __( 'Pages:', 'sela' ),
 								'after'  => '</div>',
 							) );
 						?>

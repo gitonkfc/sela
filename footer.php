@@ -2,14 +2,19 @@
 /**
  * The template for displaying the footer.
  *
- * @package poly
+ * @package Sela
  */
 ?>
 
 	</div><!-- #content -->
 
+	<?php get_sidebar( 'footer' ); ?>
 
 	<footer id="colophon" class="site-footer">
+		<?php if ( has_nav_menu ( 'social' ) ) : ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'social', 'depth' => 1, 'link_before' => '<span class="screen-reader-text">', 'link_after' => '</span>', 'container_class' => 'social-links', ) ); ?>
+		<?php endif; ?>
+
 		<div class="site-info"  role="contentinfo">
 			Polycrol 2018 All Right Reserved
 		</div><!-- .site-info -->

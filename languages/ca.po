@@ -1,5 +1,5 @@
-# Translation of WordPress.com - Themes - poly in Catalan
-# This file is distributed under the same license as the WordPress.com - Themes - poly package.
+# Translation of WordPress.com - Themes - Sela in Catalan
+# This file is distributed under the same license as the WordPress.com - Themes - Sela package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2016-11-21 06:43:14+0000\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/2.3.0-alpha\n"
 "Language: ca\n"
-"Project-Id-Version: WordPress.com - Themes - poly\n"
+"Project-Id-Version: WordPress.com - Themes - Sela\n"
 
 #. translators: %s: Name of current post
 #: inc/extras.php:141
@@ -37,27 +37,27 @@ msgid "First Footer Widget Area"
 msgstr "Zona de ginys del primer peu "
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/poly/page-templates/grid-page.php
+#: wp-content/themes/pub/sela/page-templates/grid-page.php
 msgid "Grid Page"
 msgstr "Pàgina en graella"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/poly/page-templates/full-width-page.php
+#: wp-content/themes/pub/sela/page-templates/full-width-page.php
 msgid "Full Width Page"
 msgstr "Pàgina d'amplària completa"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/poly/page-templates/front-page.php
+#: wp-content/themes/pub/sela/page-templates/front-page.php
 msgid "Front Page"
 msgstr "Pàgina Principal"
 
 #. Author URI of the plugin/theme
-#: wp-content/themes/pub/poly/style.css
+#: wp-content/themes/pub/sela/style.css
 msgid "https://wordpress.com/themes/"
 msgstr "https://wordpress.com/themes/"
 
 #. Author of the plugin/theme
-#: wp-content/themes/pub/poly/style.css
+#: wp-content/themes/pub/sela/style.css
 msgid "Automattic"
 msgstr "Automattic"
 

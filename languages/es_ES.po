@@ -1,5 +1,5 @@
-# Translation of WordPress.com - Themes - poly in Spanish (Spain)
-# This file is distributed under the same license as the WordPress.com - Themes - poly package.
+# Translation of WordPress.com - Themes - Sela in Spanish (Spain)
+# This file is distributed under the same license as the WordPress.com - Themes - Sela package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2017-03-23 08:48:37+0000\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: es\n"
-"Project-Id-Version: WordPress.com - Themes - poly\n"
+"Project-Id-Version: WordPress.com - Themes - Sela\n"
 
 #: inc/wpcom-colors.php:38
 msgid "Main Menu Background, Links, Accents"
@@ -41,22 +41,22 @@ msgid "First Footer Widget Area"
 msgstr "Primera área de widgets del pie"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/poly/page-templates/full-width-page.php
+#: wp-content/themes/pub/sela/page-templates/full-width-page.php
 msgid "Full Width Page"
 msgstr "Página de ancho completo"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/poly/page-templates/front-page.php
+#: wp-content/themes/pub/sela/page-templates/front-page.php
 msgid "Front Page"
 msgstr "Portada"
 
 #. Author URI of the plugin/theme
-#: wp-content/themes/pub/poly/style.css
+#: wp-content/themes/pub/sela/style.css
 msgid "https://wordpress.com/themes/"
 msgstr "https://es.wordpress.com/themes/"
 
 #. Author of the plugin/theme
-#: wp-content/themes/pub/poly/style.css
+#: wp-content/themes/pub/sela/style.css
 msgid "Automattic"
 msgstr "Automattic"
 

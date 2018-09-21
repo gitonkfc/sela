@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Width Page
  *
- * @package poly
+ * @package Sela
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 	<?php rewind_posts(); ?>
 
 
-	<div class="content-wrapper full-width <?php echo poly_additional_class(); ?>">
+	<div class="content-wrapper full-width <?php echo sela_additional_class(); ?>">
 		<div id="primary" class="content-area">
 			<div id="main" class="site-main" role="main">
 

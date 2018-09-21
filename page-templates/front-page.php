@@ -2,7 +2,7 @@
 /**
  * Template Name: Front Page
  *
- * @package poly
+ * @package Sela
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 
 				<?php if ( has_post_thumbnail() ) : ?>
 				<figure class="hero-content">
-					<?php the_post_thumbnail( 'poly-hero-thumbnail' ); ?>
+					<?php the_post_thumbnail( 'sela-hero-thumbnail' ); ?>
 					<div class="hero-content-overlayer">
 						<div class="hero-container-outer">
 							<div class="hero-container-inner">
@@ -25,7 +25,7 @@ get_header(); ?>
 									<div class="entry-content">
 										<?php the_content(); ?>
 									</div><!-- .entry-content -->
-									<?php edit_post_link( __( 'Edit', 'poly' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+									<?php edit_post_link( __( 'Edit', 'sela' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 								</article><!-- #post-## -->
 							</div><!-- .hero-container-inner -->
 						</div><!-- .hero-container-outer -->

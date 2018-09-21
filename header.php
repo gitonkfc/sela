@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <main id="main">
  *
- * @package poly
+ * @package Sela
  */
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'poly' ); ?>"><?php _e( 'Skip to content', 'poly' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'sela' ); ?>"><?php _e( 'Skip to content', 'sela' ); ?></a>
 
 			<div class="container-fluid">
 				<div class="row site-branding">
@@ -47,7 +47,7 @@
 					</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'poly' ); ?></button>
+			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'sela' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
