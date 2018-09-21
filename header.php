@@ -25,11 +25,14 @@
 			<div class="container-fluid">
 				<div class="row site-branding">
 					<div class="col">
+						<div class="secondary-logo">
 						<a href="http://localhost/polycroll/about-nicholas-laboratories/" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="<?php echo get_theme_mod('nicholas_logo');?>" class="img-fluid rounded float-left"></a>
-
+						</div>
 					</div>
 					<div class="col">
+						<div class="logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod('polycrol_logo');?>" class="img-fluid rounded float-left"></a>
+						</div>
 					</div>
 					<div class="col social">
 						<img src="<?php echo get_theme_mod('social_logo');?>" class="img-fluid rounded float-right" usemap="#image-map">
