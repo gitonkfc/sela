@@ -14,13 +14,13 @@ get_header(); ?>
 
 			<?php if( 'jetpack-testimonial' === get_post_type() ): ?>
 
-				<?php get_template_part( 'content', 'testimonial' ); ?>
+				<?php get_template_part( 'template-parts/content', 'testimonial' ); ?>
 
 				<?php sela_post_nav(); ?>
 
 			<?php else: ?>
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 			<?php endif; ?>
 
 		<?php endwhile; // end of the loop. ?>
