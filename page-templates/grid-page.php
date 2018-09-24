@@ -2,7 +2,7 @@
 /**
  * Template Name: Grid Page
  *
- * @package Sela
+ * @package poly
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<?php rewind_posts(); ?>
 
-	<div class="content-wrapper full-width <?php echo sela_additional_class(); ?>">
+	<div class="content-wrapper full-width <?php echo poly_additional_class(); ?>">
 		<div id="primary" class="content-area grid-page-content-area ">
 			<div id="main" class="site-content" role="main">
 
@@ -26,7 +26,7 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 
 				<?php
-					$sela_child_pages = new WP_Query( array(
+					$poly_child_pages = new WP_Query( array(
 						'post_type'      => 'page',
 						'orderby'        => 'menu_order',
 						'order'          => 'ASC',
@@ -36,12 +36,12 @@ get_header(); ?>
 					) );
 				?>
 
-				<?php if ( $sela_child_pages->have_posts() ) : ?>
+				<?php if ( $poly_child_pages->have_posts() ) : ?>
 
 				<div class="child-pages grid">
 
 						<?php
-						while ( $sela_child_pages->have_posts() ) : $sela_child_pages->the_post();
+						while ( $poly_child_pages->have_posts() ) : $poly_child_pages->the_post();
 
 							get_template_part( 'content', 'grid' );
 

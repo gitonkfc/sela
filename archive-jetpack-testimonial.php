@@ -2,7 +2,7 @@
 /**
  * The template for displaying the Testimonials archive page.
  *
- * @package Sela
+ * @package poly
  */
 
 get_header(); ?>
@@ -11,11 +11,11 @@ get_header(); ?>
 
 	<?php if ( isset( $jetpack_options['featured-image'] ) && '' != $jetpack_options['featured-image'] ) : ?>
 		<div class="entry-thumbnail">
-			<?php echo wp_get_attachment_image( (int)$jetpack_options['featured-image'], 'sela-page-thumbnail' ); ?>
+			<?php echo wp_get_attachment_image( (int)$jetpack_options['featured-image'], 'poly-page-thumbnail' ); ?>
 		</div><!-- .thumbnail -->
 	<?php endif; ?>
 
-	<div class="content-wrapper full-width <?php echo sela_additional_class(); ?>">
+	<div class="content-wrapper full-width <?php echo poly_additional_class(); ?>">
 		<div id="primary" class="content-area testimonials-content-area">
 			<div id="main" class="site-main testimonials grid" role="main">
 
@@ -26,12 +26,12 @@ get_header(); ?>
 							if ( isset( $jetpack_options['page-title'] ) && '' != $jetpack_options['page-title'] )
 								echo esc_html( $jetpack_options['page-title'] );
 							else
-								_e( 'Testimonials', 'sela' );
+								_e( 'Testimonials', 'poly' );
 							?>
 						</h1>
 					</header><!-- .entry-header -->
 
-					<?php sela_jp_testimonials_content(); ?>
+					<?php poly_jp_testimonials_content(); ?>
 				</article><!-- .hentry -->
 
 				<div id="testimonials">
@@ -40,7 +40,7 @@ get_header(); ?>
 							<?php get_template_part( 'content', 'testimonial' ); ?>
 						<?php endwhile; ?>
 
-						<?php sela_content_nav( 'nav-below' ); ?>
+						<?php poly_content_nav( 'nav-below' ); ?>
 					<?php else : ?>
 						<?php get_template_part( 'no-results', 'testimonial' ); ?>
 					<?php endif; ?>

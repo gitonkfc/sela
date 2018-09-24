@@ -1,4 +1,114 @@
 /*--------------------------------------------------------------
+Logo
+--------------------------------------------------------------*/
+
+.site-brand {
+	display: block;
+}
+
+/* Primary logo */
+.container .col-sm .primary-logo{
+	text-align:center;
+	
+}
+
+/* Container */
+#masthead .container{
+	margin-top:21px;
+	margin-bottom:23px;
+	
+}
+
+/* 320px and above screen sizes */
+@media (min-width:320px){
+
+	/* Image */
+	.secondary-logo a img{
+		padding-right:0px;
+		padding-left:26px;
+		padding-bottom:18px;
+	}
+	
+	/* Primary logo */
+	.container .col-sm .primary-logo{
+		padding-bottom:11px;
+		padding-top:4px;
+	}
+	
+	/* Social */
+	.container .social{
+		margin-right:2px;
+		margin-left:8px;
+		padding-right:23px;
+		padding-left:43px;
+	}
+	
+}
+
+/* 374px and above screen sizes */
+@media (min-width:374px){
+
+	/* Secondary logo */
+	.container .col-sm .secondary-logo{
+		
+	}
+	
+}
+
+/* 375px and above screen sizes */
+@media (min-width:375px){
+
+	/* Secondary logo */
+	.container .col-sm .secondary-logo{
+		padding-left:32px;
+	}
+	
+}
+
+/* 399px and above screen sizes */
+@media (min-width:399px){
+
+	/* Secondary logo */
+	.container .col-sm .secondary-logo{
+		margin-right:8px;
+		margin-top:0px;
+		margin-bottom:19px;
+		padding-left:0px;
+		margin-left:50px;
+	}
+	
+	/* Primary logo */
+	.container .col-sm .primary-logo{
+		margin-top:2px;
+		margin-bottom:8px;
+	}
+	
+	/* Social */
+	.container .social{
+		margin-left:61px;
+		margin-right:7px;
+	}
+	
+	/* Image */
+	.secondary-logo a img{
+		margin-left:17px;
+		text-align:center;
+	}
+	
+}
+
+/* 1200px and above screen sizes */
+@media (min-width:1200px){
+
+	/* Primary logo */
+	.container .col-sm .primary-logo{
+		margin-right:-15px;
+		margin-left:106px;
+	}
+	
+}
+
+/*--------------------------------------------------------------
 Menus
 --------------------------------------------------------------*/
 
@@ -18,4 +128,30 @@ Menus
 .main-navigation ul > .focus > a {
 	color: #fff;
 	font-weight: bold;
+}
+
+.main-container {
+	width: 1200px;
+}
+
+.header-container {
+	width: 1200px;
+}
+
+#page #masthead #site-navigation .menu-primary-menu-container{
+	width:100% !important;
+}
+
+/* 1200px and above screen sizes */
+@media (min-width:1200px){
+
+	#page #masthead #site-navigation .menu-primary-menu-container{
+		width:85% !important;
+	}
+	
+	/* Division */
+	#site-navigation .menu-primary-menu-container{
+		
+	}
+	
 }

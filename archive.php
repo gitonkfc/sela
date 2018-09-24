@@ -2,7 +2,7 @@
 /**
  * The template for displaying Archive pages.
  *
- * @package Sela
+ * @package poly
  */
 
 get_header(); ?>
@@ -32,7 +32,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php sela_content_nav( 'nav-below' ); ?>
+			<?php poly_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

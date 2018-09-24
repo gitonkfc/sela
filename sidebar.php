@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget area.
  *
- * @package Sela
+ * @package poly
  */
 ?>
 <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>

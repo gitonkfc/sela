@@ -2,7 +2,7 @@
 /**
  * The main template file.
  *
- * @package Sela
+ * @package poly
  */
 
 get_header(); ?>
@@ -18,7 +18,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php sela_content_nav( 'nav-below' ); ?>
+			<?php poly_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 

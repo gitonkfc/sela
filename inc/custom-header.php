@@ -2,13 +2,13 @@
 /**
  * Custom Header
  *
- * @package Sela
+ * @package poly
  */
 
 /**
  * Set up the WordPress core custom header settings.
  */
-function sela_custom_header_setup() {
+function poly_custom_header_setup() {
 	add_theme_support( 'custom-header', array(
 		'default-text-color'     => '333',
 		'default-image'			 => '',
@@ -16,18 +16,18 @@ function sela_custom_header_setup() {
 		'height'                 => 160,
 		'flex-width'             => true,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'sela_header_style',
-		'admin-head-callback'    => 'sela_admin_header_style',
-		'admin-preview-callback' => 'sela_admin_header_image',
+		'wp-head-callback'       => 'poly_header_style',
+		'admin-head-callback'    => 'poly_admin_header_style',
+		'admin-preview-callback' => 'poly_admin_header_image',
 	) );
 }
-add_action( 'after_setup_theme', 'sela_custom_header_setup' );
+add_action( 'after_setup_theme', 'poly_custom_header_setup' );
 
-if ( ! function_exists( 'sela_header_style' ) ) :
+if ( ! function_exists( 'poly_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  */
-function sela_header_style() {
+function poly_header_style() {
 	$header_image = get_header_image();
 	$text_color   = get_header_textcolor();
 
@@ -37,7 +37,7 @@ function sela_header_style() {
 
 	// Output the CSS for our custom styles
 	?>
-	<style type="text/css" id="sela-header-css">
+	<style type="text/css" id="poly-header-css">
 		<?php
 			// Has the text been hidden?
 			if ( ! display_header_text() ) :
@@ -59,16 +59,16 @@ function sela_header_style() {
 	</style>
 	<?php
 }
-endif; // sela_header_style
+endif; // poly_header_style
 
 
-if ( ! function_exists( 'sela_admin_header_style' ) ) :
+if ( ! function_exists( 'poly_admin_header_style' ) ) :
 /**
  * Style the header image displayed on the Appearance > Header screen.
  */
-function sela_admin_header_style() {
+function poly_admin_header_style() {
 ?>
-	<style type="text/css" id="sela-admin-header-css">
+	<style type="text/css" id="poly-admin-header-css">
 		.appearance_page_custom-header #headimg {
 			border: none;
 			letter-spacing: 2px;
@@ -102,14 +102,14 @@ function sela_admin_header_style() {
 	</style>
 <?php
 }
-endif; // sela_admin_header_style
+endif; // poly_admin_header_style
 
-if ( ! function_exists( 'sela_admin_header_image' ) ) :
+if ( ! function_exists( 'poly_admin_header_image' ) ) :
 /**
  * Create the custom header image markup displayed on the Appearance > Header screen.
  *
  */
-function sela_admin_header_image() {
+function poly_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 	$image = '';
 
@@ -122,4 +122,4 @@ function sela_admin_header_image() {
 	</div>
 <?php
 }
-endif; // sela_admin_header_image
+endif; // poly_admin_header_image

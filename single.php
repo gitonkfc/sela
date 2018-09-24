@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package Sela
+ * @package poly
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'testimonial' ); ?>
 
-				<?php sela_post_nav(); ?>
+				<?php poly_post_nav(); ?>
 
 			<?php else: ?>
 

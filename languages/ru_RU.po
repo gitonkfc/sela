@@ -1,5 +1,5 @@
-# Translation of WordPress.com - Themes - Sela in Russian
-# This file is distributed under the same license as the WordPress.com - Themes - Sela package.
+# Translation of WordPress.com - Themes - poly in Russian
+# This file is distributed under the same license as the WordPress.com - Themes - poly package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2017-08-25 14:39:33+0000\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ru\n"
-"Project-Id-Version: WordPress.com - Themes - Sela\n"
+"Project-Id-Version: WordPress.com - Themes - poly\n"
 
 #: inc/wpcom-colors.php:38
 msgid "Main Menu Background, Links, Accents"
@@ -45,34 +45,34 @@ msgid "First Footer Widget Area"
 msgstr "Первая область подвала"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/grid-page.php
+#: wp-content/themes/pub/poly/page-templates/grid-page.php
 msgid "Grid Page"
 msgstr "Страница-сетка"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/full-width-page.php
+#: wp-content/themes/pub/poly/page-templates/full-width-page.php
 msgid "Full Width Page"
 msgstr "Страница на всю ширину"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/front-page.php
+#: wp-content/themes/pub/poly/page-templates/front-page.php
 msgid "Front Page"
 msgstr "Главная страница"
 
 #. Author URI of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid "https://wordpress.com/themes/"
 msgstr "https://wordpress.com/themes/"
 
 #. Author of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid "Automattic"
 msgstr "Automattic"
 
 #. Description of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
-msgid "Sela is not your typical business theme. Vibrant, bold, and clean, with lots of space for large images, this theme will look great on all devices, from desktop to mobile."
-msgstr "Sela необычная бизнес тема. Цветная, смелая и чистая, с достаточным пространством для больших картинок, эта тема будет отлично смотреться на всех ваших устройствах, от десктопа до мобильного."
+#: wp-content/themes/pub/poly/style.css
+msgid "poly is not your typical business theme. Vibrant, bold, and clean, with lots of space for large images, this theme will look great on all devices, from desktop to mobile."
+msgstr "poly необычная бизнес тема. Цветная, смелая и чистая, с достаточным пространством для больших картинок, эта тема будет отлично смотреться на всех ваших устройствах, от десктопа до мобильного."
 
 #: search.php:16
 msgid "Search Results for: %s"

@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages.
  *
- * @package Sela
+ * @package poly
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
 
 		<?php rewind_posts(); ?>
 
-		<div class="content-wrapper <?php echo sela_additional_class(); ?>">
+		<div class="content-wrapper <?php echo poly_additional_class(); ?>">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main" role="main">
 

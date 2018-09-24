@@ -1,5 +1,5 @@
-# Translation of WordPress.com - Themes - Sela in Turkish
-# This file is distributed under the same license as the WordPress.com - Themes - Sela package.
+# Translation of WordPress.com - Themes - poly in Turkish
+# This file is distributed under the same license as the WordPress.com - Themes - poly package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2018-02-27 23:32:44+0000\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: tr\n"
-"Project-Id-Version: WordPress.com - Themes - Sela\n"
+"Project-Id-Version: WordPress.com - Themes - poly\n"
 
 #: inc/wpcom-colors.php:38
 msgid "Main Menu Background, Links, Accents"
@@ -41,27 +41,27 @@ msgid "First Footer Widget Area"
 msgstr "Birinci Alt Bölüm Bileşen Alanı"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/grid-page.php
+#: wp-content/themes/pub/poly/page-templates/grid-page.php
 msgid "Grid Page"
 msgstr "Izgara Sayfa"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/full-width-page.php
+#: wp-content/themes/pub/poly/page-templates/full-width-page.php
 msgid "Full Width Page"
 msgstr "Tam sayfa genişlik"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/front-page.php
+#: wp-content/themes/pub/poly/page-templates/front-page.php
 msgid "Front Page"
 msgstr "Ana Sayfa"
 
 #. Author URI of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid "https://wordpress.com/themes/"
 msgstr "https://wordpress.com/themes/ "
 
 #. Author of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid "Automattic"
 msgstr "Automattic"
 

@@ -2,7 +2,8 @@
 /**
  * The template for displaying Archive pages.
  *
- * @package Sela
+<<<<<<< HEAD
+ * @package poly
  */
 
 get_header(); ?>

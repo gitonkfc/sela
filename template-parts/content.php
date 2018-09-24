@@ -52,7 +52,7 @@
 						<div class="row justify-content-center">				
 					<?php 
 					while ($my_query->have_posts()) : $my_query->the_post(); ?>
-					<div class="col-4 related-post">
+					<div class="col-sm-3">
 						<div><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail(array('thumbnail', array('class'=>'img-fluid'))); ?></a></div>
 						<div><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title('<p class="related text-center">','</p>'); ?></a></div>
 					</div>

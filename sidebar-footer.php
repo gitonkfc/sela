@@ -3,8 +3,7 @@
  * The sidebar containing the footer page widget areas.
  *
  * If no active widgets in either sidebar, they will be hidden completely.
- *
- * @package Sela
+ * @package poly
  */
 
 if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) && ! is_active_sidebar( 'sidebar-4' ) ) {

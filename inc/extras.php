@@ -2,22 +2,23 @@
 /**
  * Custom functions that act independently of the theme templates
  *
- * @package Sela
+ * @package poly
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function sela_page_menu_args( $args ) {
+function poly_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'sela_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'poly_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
  */
-function sela_body_classes( $classes ) {
+
+function poly_body_classes( $classes ) {
 	if ( is_page_template( 'full-width-page.php' ) || is_page_template( 'grid-page.php' ) )
 		$classes[] = 'full-width-page';
 
@@ -39,12 +40,12 @@ function sela_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'sela_body_classes' );
+add_filter( 'body_class', 'poly_body_classes' );
 
 /**
  * Adds custom classes to the array of post classes.
  */
-function sela_post_classes( $classes ) {
+function poly_post_classes( $classes ) {
 
     if ( ! has_post_thumbnail() ) {
         $classes[] = 'without-featured-image';
@@ -54,12 +55,13 @@ function sela_post_classes( $classes ) {
 
     return $classes;
 }
-add_filter( 'post_class', 'sela_post_classes' );
+
+add_filter( 'post_class', 'poly_post_classes' );
 
 /**
  * Change the class of the hero area depending on featured image.
  */
-function sela_additional_class() {
+function poly_additional_class() {
 
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -81,7 +83,7 @@ function sela_additional_class() {
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  */
-function sela_enhanced_image_navigation( $url, $id ) {
+function poly_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) ) {
 		return $url;
 	}
@@ -93,14 +95,14 @@ function sela_enhanced_image_navigation( $url, $id ) {
 
 	return $url;
 }
-add_filter( 'attachment_link', 'sela_enhanced_image_navigation', 10, 2 );
+add_filter( 'attachment_link', 'poly_enhanced_image_navigation', 10, 2 );
 
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
 	/**
 	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
 	 *
 	 */
-	function sela_wp_title( $title, $sep ) {
+	function poly_wp_title( $title, $sep ) {
 		if ( is_feed() ) {
 			return $title;
 		}
@@ -114,37 +116,37 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
 		}
 		// Add a page number if necessary:
 		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'sela' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Page %s', 'poly' ), max( $paged, $page ) );
 		}
 		return $title;
 	}
-	add_filter( 'wp_title', 'sela_wp_title', 10, 2 );
+	add_filter( 'wp_title', 'poly_wp_title', 10, 2 );
 
 	/**
 	 * Title shim for sites older than WordPress 4.1.
 	 *
 	 * @todo Remove this function when WordPress 4.3 is released.
 	 */
-	function sela_render_title() {
+	function poly_render_title() {
 		?>
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<?php
 	}
-	add_action( 'wp_head', 'sela_render_title' );
+	add_action( 'wp_head', 'poly_render_title' );
 endif;
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'Continue reading' link.
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
-if ( ! function_exists( 'sela_excerpt_more' ) ) :
-    function sela_excerpt_more( $more ) {
+if ( ! function_exists( 'poly_excerpt_more' ) ) :
+    function poly_excerpt_more( $more ) {
         $link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
             esc_url( get_permalink( get_the_ID() ) ),
             /* translators: %s: Name of current post */
-            sprintf( esc_html__( 'Continue reading %s', 'sela' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+            sprintf( esc_html__( 'Continue reading %s', 'poly' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
             );
         return ' &hellip; ' . $link;
     }
-    add_filter( 'excerpt_more', 'sela_excerpt_more' );
+    add_filter( 'excerpt_more', 'poly_excerpt_more' );
 endif;

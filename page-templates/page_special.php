@@ -2,7 +2,7 @@
 /**
  * Template Name: Special Page
  *
- * @package Sela
+ * @package poly
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
 						<div class="entry-content">
 			<div class="row-single">
 				<div class="col-sm single text-justify">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sela' ) ); ?>
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'poly' ) ); ?>
 		</div>
 	</div>
 </div>

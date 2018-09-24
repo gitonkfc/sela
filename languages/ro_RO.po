@@ -1,5 +1,5 @@
-# Translation of WordPress.com - Themes - Sela in Romanian
-# This file is distributed under the same license as the WordPress.com - Themes - Sela package.
+# Translation of WordPress.com - Themes - poly in Romanian
+# This file is distributed under the same license as the WordPress.com - Themes - poly package.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2017-05-29 19:53:44+0000\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ro\n"
-"Project-Id-Version: WordPress.com - Themes - Sela\n"
+"Project-Id-Version: WordPress.com - Themes - poly\n"
 
 #: image.php:44
 msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a>"
@@ -49,32 +49,32 @@ msgid "First Footer Widget Area"
 msgstr "Prima zonă asamblabilă din subsol"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/grid-page.php
+#: wp-content/themes/pub/poly/page-templates/grid-page.php
 msgid "Grid Page"
 msgstr "Pagină grilă"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/full-width-page.php
+#: wp-content/themes/pub/poly/page-templates/full-width-page.php
 msgid "Full Width Page"
 msgstr "Pagină cu Lățime Completă"
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/front-page.php
+#: wp-content/themes/pub/poly/page-templates/front-page.php
 msgid "Front Page"
 msgstr "Pagina principală"
 
 #. Author URI of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid "https://wordpress.com/themes/"
 msgstr "https://wordpress.com/themes/"
 
 #. Description of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
-msgid "Sela is not your typical business theme. Vibrant, bold, and clean, with lots of space for large images, this theme will look great on all devices, from desktop to mobile."
-msgstr "Sela nu este o temă de afaceri tipică. Vibrantă, cu caractere aldine și curată, cu foarte mult spațiu pentru imagini mari, această temă va arăta foarte bine pe toate dispozitivele, de la desktop la mobil."
+#: wp-content/themes/pub/poly/style.css
+msgid "poly is not your typical business theme. Vibrant, bold, and clean, with lots of space for large images, this theme will look great on all devices, from desktop to mobile."
+msgstr "poly nu este o temă de afaceri tipică. Vibrantă, cu caractere aldine și curată, cu foarte mult spațiu pentru imagini mari, această temă va arăta foarte bine pe toate dispozitivele, de la desktop la mobil."
 
 #. Author of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid "Automattic"
 msgstr "Automattic"
 

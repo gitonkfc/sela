@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Sela 1.1.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/sela\n"
+"Project-Id-Version: poly 1.1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/poly\n"
 "POT-Creation-Date: 2017-04-21 03:29:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -388,44 +388,44 @@ msgid "Search Results for: %s"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
-msgid "Sela"
+#: wp-content/themes/pub/poly/style.css
+msgid "poly"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
-msgid "https://wordpress.com/themes/sela/"
+#: wp-content/themes/pub/poly/style.css
+msgid "https://wordpress.com/themes/poly/"
 msgstr ""
 
 #. Description of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid ""
-"Sela is not your typical business theme. Vibrant, bold, and clean, with lots "
+"poly is not your typical business theme. Vibrant, bold, and clean, with lots "
 "of space for large images, this theme will look great on all devices, from "
 "desktop to mobile."
 msgstr ""
 
 #. Author of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid "Automattic"
 msgstr ""
 
 #. Author URI of the plugin/theme
-#: wp-content/themes/pub/sela/style.css
+#: wp-content/themes/pub/poly/style.css
 msgid "https://wordpress.com/themes/"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/front-page.php
+#: wp-content/themes/pub/poly/page-templates/front-page.php
 msgid "Front Page"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/full-width-page.php
+#: wp-content/themes/pub/poly/page-templates/full-width-page.php
 msgid "Full Width Page"
 msgstr ""
 
 #. Template Name of the plugin/theme
-#: wp-content/themes/pub/sela/page-templates/grid-page.php
+#: wp-content/themes/pub/poly/page-templates/grid-page.php
 msgid "Grid Page"
 msgstr ""

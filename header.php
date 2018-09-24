@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <main id="main">
  *
- * @package Sela
+ * @package poly
  */
 ?>
 <!DOCTYPE html>
@@ -20,34 +20,41 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'sela' ); ?>"><?php _e( 'Skip to content', 'sela' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'poly' ); ?>"><?php _e( 'Skip to content', 'poly' ); ?></a>
 
-			<div class="container-fluid">
-				<div class="row site-branding">
-					<div class="col">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm">
 						<div class="secondary-logo">
-						<a href="http://localhost/polycroll/about-nicholas-laboratories/" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="<?php echo get_theme_mod('nicholas_logo');?>" class="img-fluid rounded float-left"></a>
+							<a href="http://localhost/polycroll/about-nicholas-laboratories/"><img src="<?php echo get_theme_mod('nicholas_logo');?>"></a>
 						</div>
 					</div>
-					<div class="col">
-						<div class="logo">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod('polycrol_logo');?>" class="img-fluid rounded float-left"></a>
+					<div class="col-sm">
+						<div class="primary-logo">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod('polycrol_logo');?>"></a>
 						</div>
 					</div>
-					<div class="col social">
-						<img src="<?php echo get_theme_mod('social_logo');?>" class="img-fluid rounded float-right" usemap="#image-map">
-						<map name="image-map">
-    						<area target="" alt="facebook" title="facebook" href="<?php echo esc_url('www.facebook.com')?>" coords="15,17,13" shape="circle">
-    						<area target="" alt="twitter" title="twitter" href="<?php echo esc_url('www.twitter.com')?>" coords="58,17,14" shape="circle">
-    						<area target="" alt="instagram" title="instagram" href="<?php echo esc_url('www.instagram.com')?>" coords="104,19,15" shape="circle">
-    						<area target="" alt="youtube" title="youtube" href="<?php echo esc_url('www.youtube.com')?>" coords="147,19,16" shape="circle">
-						</map>
+					<div class="col-sm">
+						<div class="row justify-content-end">
+							<div class="col sociallist">
+								<a href="<?php echo esc_url('www.facebook.com')?>"><img src="http://localhost/polycroll/wp-content/uploads/2018/09/fb-1.png" class="img-fluid"></a>
+							</div>
+							<div class="col sociallist">
+								<a href="<?php echo esc_url('www.twitter.com')?>"><img src="http://localhost/polycroll/wp-content/uploads/2018/09/tw-1.png" class="img-fluid"></a>
+							</div>
+							<div class="col sociallist">
+								<a href="<?php echo esc_url('www.instagram.com')?>"><img src="http://localhost/polycroll/wp-content/uploads/2018/09/ig-1.png" class="img-fluid"></a>
+							</div>
+							<div class="col sociallist">
+								<a href="<?php echo esc_url('www.youtube.com')?>"><img src="http://localhost/polycroll/wp-content/uploads/2018/09/yt-1.png" class="img-fluid"></a>
+							</div>
+						</div>
 					</div>
 					</div>
 					</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'sela' ); ?></button>
+			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'poly' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
