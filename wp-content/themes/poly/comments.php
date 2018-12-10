@@ -28,6 +28,7 @@ if ( post_password_required() )
 		<?php endif; // check for comment navigation ?>
 
 		<ol class="comment-list">
+
 			<?php wp_list_comments( array( 'avatar_size' => 48, 'callback' => 'poly_comment' ) ); ?>
 		</ol><!-- .comment-list -->
 

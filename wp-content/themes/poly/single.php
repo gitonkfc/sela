@@ -10,20 +10,20 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php if( 'jetpack-testimonial' === get_post_type() ): ?>
+				<?php if( 'jetpack-testimonial' === get_post_type() ): ?>
 
-				<?php get_template_part( 'content', 'testimonial' ); ?>
+					<?php get_template_part( 'template-parts/content', 'testimonial' ); ?>
 
-				<?php poly_post_nav(); ?>
+					<?php poly_post_nav(); ?>
 
-			<?php else: ?>
+				<?php else: ?>
+					<!-- Get content template-->
+					<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				<?php endif; ?>
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endif; ?>
-
-		<?php endwhile; // end of the loop. ?>
+			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

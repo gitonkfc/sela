@@ -13,13 +13,18 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'poly' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<div class="container">
+					<div class="row">
+						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'poly' ), '<span>' . get_search_query() . '</span>' ); ?></h1>						
+					</div>
+				</div>
+
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
+			<!--Get Search Query-->
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'search' ); ?>
+				<?php get_template_part( 'template-parts/content', 'search' ); ?>
 
 			<?php endwhile; ?>
 
@@ -27,7 +32,7 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
 

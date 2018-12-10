@@ -7,6 +7,7 @@ function canvas_setup()
 	register_nav_menus(array(
 		'primary' => __('Primary Menu', 'canvas'),
 		'secondary' => __('Secondary Menu', 'canvas'),
+		'extra' => __('Extra Menu', 'canvas'),
 		'footer' => __('Footer Menu', 'canvas')
 	));
 
@@ -76,3 +77,175 @@ function canvas_theme_scripts()
     wp_enqueue_script( 'functions', get_template_directory_uri() . '/js/functions.js', array(), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'canvas_theme_scripts' );
+
+
+function menu_search($items, $args){
+    if( $args->theme_location == 'secondary')  {
+        $search = '<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>';
+        $search .= '<form action="search.html" method="get">';
+        $search .= '<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">';
+        $search .= '</form>';
+    }
+    return $items . $search;
+}
+add_filter('wp_nav_menu_items','menu_search', 10, 2);
+
+function menu_cart($items, $args){
+    if( $args->theme_location == 'extra')  {
+        $search = '<a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>';
+        $search .= '<div class="top-cart-content">';
+        $search .= '<div class="top-cart-title">';
+        $search .= '<h4>Shopping Cart</h4>';
+        $search .= '</div>';
+        $search .= '<div class="top-cart-items">';
+        $search .= '<div class="top-cart-item clearfix">';
+        $search .= '<div class="top-cart-item-image">';
+        $search .= '<a href="#"></a>';
+        $search .= '</div>'; 
+        $search .= '<div class="top-cart-item-desc">';
+        $search .= '<a href="#">Blue Round-Neck Tshirt</a>';
+        $search .= '<span class="top-cart-item-price">$19.99</span>';
+        $search .= '<span class="top-cart-item-quantity">x 2</span>';
+        $search .= '</div>';
+        $search .= '</div>';
+        $search .= '<div class="top-cart-action clearfix">';
+        $search .= '<span class="fleft top-checkout-price">$114.95</span>';
+        $search .= '<button class="button button-3d button-small nomargin fright">View Cart</button>';
+        $search .= '</div>';
+
+    }
+    return $items . $search;
+}
+add_filter('wp_nav_menu_items','menu_cart', 10, 2);
+
+
+function sc_headstick($atts)
+{
+	extract(shortcode_atts(array(
+		'h3' => 'asas',
+		'pr' => 'asas',
+		'link' => 'asas',
+		'alt_link' => 'asas'
+	), $atts));
+	$result = '<div class="section header-stick">';
+	$result .= '<div class="container clearfix">';
+	$result .= '<div class="row">';
+	$result .= '<div class="col-lg-9">';
+	$result .= '<div class="heading-block bottommargin-sm">';
+	$result .= '<h3>';
+	$result .= $h3;
+	$result .= '</h3>';
+	$result .= '</div>';
+	$result .= '<p class="nobottommargin">';
+	$result .= $pr;
+	$result .= '</p>';
+	$result .= '</div>';
+	$result .= '<div class="col-lg-3">';
+	$result .= '<a href="' . $link . '" class="button button-3d button-dark button-large btn-block center" style="margin-top: 30px;">'. $alt_link . '</a>';
+	$result .= '</div>';
+	$result .= '</div>';
+	$result .= '</div>';
+	$result .= '</div>';
+	return $result;
+}
+add_shortcode('headstick', 'sc_headstick');
+
+function sc_onethirdnbm($atts,$content=null)
+{
+	extract(shortcode_atts(array(
+		'first' => do_shortcode($content),
+		'second' => do_shortcode($content),
+		'third' => do_shortcode($content)
+	), $atts));
+	$result = '<div class="container clearfix">';
+	$result .= '<div class="col_one_third nobottommargin">';
+	$result .= $first;
+	$result .= '</div>';
+	$result .= '<div class="col_one_third nobottommargin">';
+	$result .= $second;
+	$result .= '</div>';
+	$result .= '<div class="col_one_third nobottommargin col_last">';
+	$result .= $third;
+	$result .= '</div>';
+	$result .= '<div class="clear"></div>';
+	$result .= '</div>';
+	return $result;
+}
+add_shortcode('onethirdnbm', 'sc_onethirdnbm');
+
+function sc_3featuremediabox($atts)
+{
+	extract(shortcode_atts(array(
+		'image1' 	=> '',
+		'image2' 	=> '',
+		'image3' 	=> '',
+		'alt1' 		=> '',
+		'alt2' 		=> '',
+		'alt3' 		=> '',
+		'h3_1' 		=> '',
+		'h3_2' 		=> '',
+		'h3_3' 		=> '',
+		'span1' 		=> '',
+		'span2' 		=> '',
+		'span3' 		=> '',
+		'pr1'		=> '',
+		'pr2'		=> '',
+		'pr3'		=> ''
+	), $atts));
+	$result = '<div class="container clearfix">';
+	$result .= '<div class="col_one_third nobottommargin">';
+	$result .= '<div class="feature-box media-box">';
+	$result .= '<div class="fbox-media">';
+	$result .= '<img src="'.$image1.'" alt="'.$alt1.'">';
+	$result .= '</div>';
+	$result .=	'<div class="fbox-desc">';
+	$result .= '<h3>'.$h3_1.'<span class="subtitle">'.$span1.'</span></h3>';
+	$result .= '<p>'.$pr1.'</p>';
+	$result .= '</div>';
+	$result .= '</div>';
+	$result .= '</div>';
+	$result .= '<div class="col_one_third nobottommargin">';
+	$result .= '<div class="feature-box media-box">';
+	$result .= '<div class="fbox-media">';
+	$result .= '<img src="'.$image2.'" alt="'.$alt2.'">';
+	$result .= '</div>';
+	$result .=	'<div class="fbox-desc">';
+	$result .= '<h3>'.$h3_2.'<span class="subtitle">'.$span2.'</span></h3>';
+	$result .= '<p>'.$pr2.'</p>';
+	$result .= '</div>';
+	$result .= '</div>';
+	$result .= '</div>';
+	$result .= '<div class="col_one_third nobottommargin col_last">';
+	$result .= '<div class="feature-box media-box">';
+	$result .= '<div class="fbox-media">';
+	$result .= '<img src="'.$image3.'" alt="'.$alt3.'">';
+	$result .= '</div>';
+	$result .=	'<div class="fbox-desc">';
+	$result .= '<h3>'.$h3_3.'<span class="subtitle">'.$span3.'</span></h3>';
+	$result .= '<p>'.$pr3.'</p>';
+	$result .= '</div>';
+	$result .= '</div>';
+	$result .= '</div>';
+	$result .= '<div class="clear"></div>';
+	$result .= '</div>';
+
+	return $result;
+}
+add_shortcode('3featuremediabox', 'sc_3featuremediabox');
+
+function sc_parallaxheading($atts)
+{
+	extract(shortcode_atts(array(
+		'backgroundimage' => '',
+		'h2' =>''
+	), $atts));
+	$result = '<div class="section parallax bottommargin-lg" style="background-image: url('.$backgroundimage.'); padding: 100px 0;" data-bottom-top="background-position:0px 300px;" data-top-bottom="background-position:0px -300px;">';
+	$result .= '<div class="heading-block center nobottomborder nobottommargin">';
+	$result .= '<h2>'.$h2.'</h2>';
+	$result .= '</div>';
+	$result .= '</div>';
+	return $result;
+}
+add_shortcode('parallaxheading','sc_parallaxheading');
+
+require get_template_directory() . '/inc/menu-with-description-class.php';

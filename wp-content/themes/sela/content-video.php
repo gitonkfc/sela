@@ -1,12 +1,12 @@
 <?php
 /**
- * @package poly
+ * @package Sela
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php poly_post_thumbnail(); ?>
+	<?php sela_post_thumbnail(); ?>
 
 	<header class="entry-header">
 		<?php if ( is_single() ) : ?>
@@ -19,14 +19,14 @@
 
 	<div class="entry-body">
 		<div class="entry-meta">
-			<?php poly_entry_meta(); ?>
+			<?php sela_entry_meta(); ?>
 		</div><!-- .entry-meta -->
 
 		<div class="entry-content">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'poly' ) ); ?>
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'sela' ) ); ?>
 			<?php
 				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'poly' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'sela' ),
 					'after'  => '</div>',
 				) );
 			?>
@@ -34,11 +34,11 @@
 
 		<?php if ( is_single() ) : ?>
 		<footer class="entry-meta">
-			<?php poly_footer_entry_meta(); ?>
+			<?php sela_footer_entry_meta(); ?>
 		</footer><!-- .entry-meta -->
 		<?php endif; ?>
 
-		<?php poly_author_bio(); ?>
+		<?php sela_author_bio(); ?>
 	</div><!-- .entry-body -->
 
 </article><!-- #post-## -->

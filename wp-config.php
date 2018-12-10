@@ -77,7 +77,11 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+define( 'WP_DEBUG_DISPLAY', true );
+define( 'WP_DEBUG_LOG', true );
+
+
 
 /* That's all, stop editing! Happy blogging. */
 
@@ -87,3 +91,6 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+@ini_set( 'upload_max_size' , '200M' );
+@ini_set( 'post_max_size', '13M');
+@ini_set( 'memory_limit', '15M' );

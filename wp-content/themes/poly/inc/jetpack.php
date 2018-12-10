@@ -23,6 +23,7 @@ function poly_jetpack_setup() {
 	add_theme_support( 'jetpack-responsive-videos' );
 
 	// Add theme support for Site Logo.
+
 	add_theme_support( 'site-logo', array( 'size' => 'poly-logo' ) );
 
 	add_image_size( 'poly-logo', 1180, 380 );
@@ -105,6 +106,7 @@ function poly_infinite_scroll_render() {
 /**
  * Return early if Author Bio is not available.
  */
+
 function poly_author_bio() {
 	if ( ! function_exists( 'jetpack_author_bio' ) ) {
 		return;

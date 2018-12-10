@@ -6,44 +6,31 @@
  */
 
 get_header(); ?>
-
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-					<h1 class="text-center font-weight-bold"><?php single_cat_title(); ?></h1>
-			</header><!-- .page-header -->
+		<div class="container">
+			<div class="row justify-content-center poly-category">
+					<h1><?php single_cat_title(); ?></h1>
+			</div><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
-    			<div class="row content justify-content-md-center">
-        			<div class="col-md-8 justify-content-md-center">
-        				<?php $content = apply_filters( 'the_content', $post->post_content );
-							$embeds = get_media_embedded_in_content( $content );
-							echo $embeds[0];
-
-						?>
-				  	   	<h4 class="title font-weight-bold"><?php echo esc_attr($post->post_title)?></h4>
-  	       				<?php  echo '<p class="text-justify category-group">' . $post->post_excerpt . '</p>' ?>
+    			<div class="row content-poly justify-content-center">
+        			<div class="col-md-8">
+			<?php 
+			$youtube_url = get_post_meta($post->ID, 'youtube', true);
+			$poster = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+			echo do_shortcode('[video src="'.$youtube_url.'" poster="'.$poster[0].'" class="embed-responsive embed-responsive-1by1 wp-video-shortcode" width="750px" height="500px"]');?>
+						<br>
+				  	   	<a href="<?php echo get_permalink( $post );?>"><h4 class="title font-weight-bold"><?php echo esc_attr($post->post_title)?></h4></a>
+						<br>
+						<p class="text-justify category-group"><?php echo $post->post_excerpt;?></p>
         			</div>
-    			</div>
-    			<div class="space">
-    			<hr class="sc" />
+        			<hr class="poly">
     			</div>
 			<?php endwhile; ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
 		<?php endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
+	</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 

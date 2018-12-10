@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <main id="main">
  *
- * @package poly
+ * @package Sela
  */
 ?>
 <!DOCTYPE html>
@@ -20,16 +20,16 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
-		<a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'poly' ); ?>"><?php _e( 'Skip to content', 'poly' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'sela' ); ?>"><?php _e( 'Skip to content', 'sela' ); ?></a>
 
 			<div class="container-fluid">
 				<div class="row site-branding">
 					<div class="col">
-						<a href="http://localhost/polycroll/about-nicholas-laboratories/" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="<?php echo get_theme_mod('nicholas_logo');?>" class="img-fluid rounded float-left"></a>
+						<a href="index.php" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="<?php echo get_theme_mod('nicholas_logo');?>" class="img-fluid rounded float-left"></a>
 
 					</div>
 					<div class="col">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod('polycrol_logo');?>" class="img-fluid rounded float-left"></a>
+						<a href="index.php" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="<?php echo get_theme_mod('polycrol_logo');?>" class="img-fluid rounded float-left"></a>
 					</div>
 					<div class="col social">
 						<img src="<?php echo get_theme_mod('social_logo');?>" class="img-fluid rounded float-right" usemap="#image-map">
@@ -44,7 +44,7 @@
 					</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'poly' ); ?></button>
+			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'sela' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

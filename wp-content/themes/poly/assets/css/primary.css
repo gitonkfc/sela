@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+Menus
+--------------------------------------------------------------*/
+
+.main-navigation {
+		font-family: Lato;
+ 		font-weight: normal;
+		width: 100%;
+	}
+
+.main-navigation a {
+		font-size: 18px;
+		font-weight: 400;
+}
+
+.main-navigation a:hover,
+.main-navigation ul > :hover > a,
+.main-navigation ul > .focus > a {
+	color: #fff;
+	font-weight: bold;
+}
